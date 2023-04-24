@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>exercicio 6</title>
+</head>
+<script type="text/javascript">
+    // Lendo quantidade de fantasias e valor do aluguel por unidade
+var quantidade = parseInt(prompt("Digite a quantidade de fantasias que a locadora possui: "));
+var valorAluguel = parseFloat(prompt("Digite o valor do aluguel por unidade: "));
+
+// Calculando faturamento anual da locadora
+var alugueisMes = Math.ceil(quantidade / 3); // um terço das fantasias são alugadas por mês
+var faturamentoAnual = alugueisMes * valorAluguel * 12; // faturamento anual é o faturamento mensal multiplicado por 12 meses
+document.write("Faturamento anual da locadora: R$ " + faturamentoAnual.toFixed(2));
+
+// Calculando valor ganho com multas por mês
+var alugueisComAtraso = Math.ceil(alugueisMes / 10); // um décimo das fantasias alugadas no mês são devolvidas com atraso
+var valorMultas = alugueisComAtraso * valorAluguel * 0.1; // valor das multas é 10% do valor do aluguel por cada fantasia devolvida com atraso
+document.write("Valor ganho com multas por mês: R$ " + valorMultas.toFixed(2));
+
+// Calculando quantidade de fantasias que a locadora terá no final do ano
+var estragadas = Math.ceil(quantidade * 0.02); // 2% das fantasias se estragam ao longo do ano
+var reposicao = Math.ceil(quantidade / 10); // um décimo do total é comprado para reposição
+var quantidadeFinal = quantidade - estragadas + reposicao; // quantidade final é o saldo da quantidade original menos as fantasias estragadas somado com as reposições
+document.write("Quantidade de fantasias que a locadora terá no final do ano: " + quantidadeFinal);
+
+</script>
+</html>

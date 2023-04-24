@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>exercicio 5</title>
+</head>
+<script type="text/javascript">
+    var HT = parseFloat(prompt("Digite as horas trabalhadas no mês:")); // lendo as horas trabalhadas
+    var VH = parseFloat(prompt("Digite o valor da hora trabalhada:")); // lendo o valor da hora trabalhada
+    var PD = parseFloat(prompt("Digite o percentual de desconto:")); // lendo o percentual de desconto
+
+    var SB = HT * VH; // calculando o salário bruto
+    var TD = (PD / 100) * SB; // calculando o total de desconto
+    var SL = SB - TD; // calculando o salário líquido
+
+    // exibindo os valores na tela
+    document.write("Horas trabalhadas: " + HT +"<br>");
+    document.write("Salário bruto: R$ " + SB.toFixed(2) + "<br>");
+    document.write("Desconto: R$ " + TD.toFixed(2) + "<br>");
+    document.write("Salário líquido: R$ " + SL.toFixed(2) + "<br>");
+
+</script>
+
+</html>
